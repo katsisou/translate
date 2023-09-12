@@ -1,7 +1,18 @@
+@import "https://fonts.googleapis.com/css2?family=Lalezar&amp;family=Poppins:wght@100;200;300;400;500;600;700;800&amp;display=swap";
 * {
-    margin: auto;
-    padding: 0;
-    font-family: poppins;
+  padding: 0;
+  margin: auto;
+  font-family: "Poppins", Lalezar, cursive, sans-serif;
+}
+
+
+html {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: $base-font-size;
+  @media (max-width: 400px) {
+    font-size: $mobile-base-font-size;
+  }
 }
 
 body {
@@ -36,8 +47,8 @@ body {
     color: #2f2f2f;
     font-weight: 300;
     font-family: futura;
-    text-transform:uppercase;
-    font-size: 1.2em;
+    text-transform:lowercase;
+    font-size: 25px;
     text-decoration: none;
   }
 
@@ -48,4 +59,313 @@ body {
     margin:-10px;
 }
 
+/*
+$brightred: #cc0000;
+$usared: #bf0a30;
+$lred: #cf142b;
+$mred: #de2910;
+$dred: #ee0A30;
+$lorange: #ff9933;
+$yellow: #fedf00;
+$gold: #fecc00;
+$lgreen: #009b3a;
+$brightgreen: #1eb53a;
+$dgreen: #006233;
+$vdgreen: #01411c;
+$lblue: #74acdf;
+$mblue: #006aa7;
+$blue: #003399;
+$dblue: #00008b;
+$vdblue: #241d4f;
+$white: #fff;
+$black: #000;
 
+
+.box{
+  display: flex;
+  max-width: $max-container-width;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.flag {
+  font-size: 1rem;
+  width: 12em;
+  height: 9em;
+  margin: 20px;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.overlay {
+  width: 12em;
+  height: 6em;
+  background: black;
+  color: white;
+  opacity: 0;
+  z-index: 2;
+  top: 0;
+  padding-top: 3em;
+  position: absolute;
+  span {
+    display: block;
+    font-size: 2em;
+  }
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.australia {
+  background: $blue;
+  &:before {
+    content: "\002737";
+    color: $white;
+    font-size: 1.5em;
+    position: absolute;
+    top: 0.3em;
+    left: 5.5em;
+    text-shadow: 1.2em 1.2em $white, -1em 1.5em $white, 0 3.6em $white;
+  }
+  &:after {
+    content: "\002737";
+    color: $white;
+    font-size: 3em;
+    position: absolute;
+    top: 1.6em;
+    left: 0.6em;
+  }
+  > div:nth-child(1) {
+    position: relative;
+    @extend .united-kingdom;
+    width: 6em;
+    height: 4em;
+  }
+  > div:nth-child(2) {
+    &:before {
+      content: "\2605";
+      color: $white;
+      font-size: 0.8em;
+      z-index: 5;
+      position: absolute;
+      top: 4.8em;
+      left: 12.4em;
+    }
+  }
+}
+*/
+
+/*
+@import "https://fonts.googleapis.com/css2?family=Lalezar&amp;family=Poppins:wght@100;200;300;400;500;600;700;800&amp;display=swap";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Lalezar, cursive, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  background: #6320ee;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 36px -5px #b8b8ff;
+}
+
+.wrapper {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.wrapper .text-input {
+  display: block;
+}
+
+.text-input .to-text {
+  border-radius: 0px;
+  border-top: 1px solid #ccc;
+}
+
+.text-input textarea {
+  height: 250px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 0.3rem;
+}
+
+.text-input textarea::placeholder {
+  color: #b7b6b6;
+}
+
+.controls,
+li,
+.icons,
+.icons ion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  list-style: none;
+  padding: 12px 15px;
+  border-top: 1px solid #ccc;
+}
+
+.controls .row .icons {
+  width: 38%;
+}
+
+.controls .row .icons ion-icon {
+  width: 50px;
+  color: #adadad;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  justify-content: center;
+}
+.controls .row.from .icons {
+  padding-right: 15px;
+  border-right: 1px solid #ccc;
+}
+.controls .row.to .icons {
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
+}
+.controls .row select {
+  color: #333;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: none;
+  padding-left: 5px;
+}
+.text-input textarea::-webkit-scrollbar {
+  width: 4px;
+}
+.controls .row select::-webkit-scrollbar {
+  width: 8px;
+}
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track {
+  background: #fff;
+}
+.text-input textarea::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 8px;
+}
+.controls .row select::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+.controls .exchange {
+  color: #adadad;
+  cursor: pointer;
+  font-size: 1.7rem;
+  transition: transform 0.2s ease;
+}
+.controls ion-icon:active {
+  transform: scale(0.9);
+}
+.container button {
+  width: 100%;
+  padding: 14px;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  background: #6320ee;
+}
+
+@media (max-width: 660px) {
+  .container {
+    padding: 20px;
+  }
+  .wrapper .text-input {
+    flex-direction: column;
+  }
+  .text-input .to-text {
+    border-left: 0px;
+    border-top: 1px solid #ccc;
+  }
+  .text-input textarea {
+    height: 200px;
+  }
+  .controls .row .icons {
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .container button {
+    padding: 13px;
+    font-size: 1.2rem;
+  }
+  .controls .row select {
+    font-size: 1.2rem;
+  }
+  .controls .exchange {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .container {
+    zoom: 0.7;
+  }
+}
+
+*/
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+#result-container {
+    display: none;
+    margin-top: 20px;
+}
+
+#translated-text {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
