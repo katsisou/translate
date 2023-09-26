@@ -47,6 +47,51 @@
 </body>
 </html>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+const sourceText = document.getElementById('source-text');
+const translateButton = document.getElementById('translate-button');
+const translatedText = document.getElementById('translated-text');
+const resultContainer = document.getElementById('result-container');
+
+translateButton.addEventListener('click', () => {
+const textToTranslate = sourceText.value;
+if (!textToTranslate) {
+alert('Please enter text to translate.');
+return;
+}
+
+// Replace 'YOUR_API_KEY' with your actual Google Cloud Translation API key
+const apiKey = 'e7be84f3f1fca17585c1';
+
+const apiUrl = `https://api.mymemory.translated.net/set?seg=Hello World!&tra=Ciao Mondo!&langpair=en|it`;
+const data = {
+q: textToTranslate,
+target: 'es', // Change this to your desired target language code
+};
+
+fetch(apiUrl, {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json',
+},
+body: JSON.stringify(data),
+})
+.then(response => response.json())
+.then(data => {
+const translation = data.data.translations[0].translatedText;
+translatedText.innerText = translation;
+resultContainer.style.display = 'block';
+})
+.catch(error => {
+console.error('Translation error:', error);
+alert('An error occurred while translating. Please try again later.');
+});
+});
+});
+
+
+</script>
 
         <!---
 <html lang="en">
@@ -200,7 +245,7 @@ icons.forEach((icon) => {
 </script>
 -->
 
-
+<!--
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const sourceText = document.getElementById('source-text');
@@ -246,6 +291,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 </script>
+
+-->
+
+
 
 </body>
 </html>

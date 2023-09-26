@@ -9,10 +9,6 @@
 html {
   text-align: center;
   font-family: sans-serif;
-  font-size: $base-font-size;
-  @media (max-width: 400px) {
-    font-size: $mobile-base-font-size;
-  }
 }
 
 body {
