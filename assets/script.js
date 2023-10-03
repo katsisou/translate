@@ -35,14 +35,68 @@ translateBtn.addEventListener("click", () => {
     if (!text) return;
     toText.setAttribute("placeholder", "Translating...");
     const apiKey = 'e7be84f3f1fca17585c1';
-    let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
-    fetch(apiUrl).then(res => res.json()).then(data => {
-        toText.value = data.responseData.translatedText;
-        data.matches.forEach(data => {
-            if (data.id === 0) {
-                toText.value = data.translation;
+   
+
+    const countries = 'assets/countries.json';
+
+    const languageArr = [];
+
+    fetch(countries)
+        .then(res => res.json())
+        .then(data => {
+            // Check if data is an array
+            if (Array.isArray(data)) {
+                console.log(data);
+
+                data.forEach(item => {
+                    console.log(item);
+                    let text = 'hello'
+                    let translateFrom = 'en-GB';
+                    let translateTo = item.code;
+
+
+                    //call the api for each language type
+                    let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
+
+                    //add the result back into a new array to show content
+                    fetch(apiUrl).then(res => res.json()).then(language => {
+                        console.log(language);
+                        languageArr.push(language.matches[0]);
+                    })
+
+
+
+                });
+            } else {
+                console.error('The fetched data is not an array.');
             }
+            console.log(languageArr);
+            //call a new funtion to go create the boxes
+            makeflags(languageArr);
+
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
         });
-        toText.setAttribute("placeholder", "Translation");
-    });
+
+
+
+    // fetch(apiUrl).then(res => res.json()).then(data => {
+    //     toText.value = data.responseData.translatedText;
+    //     data.matches.forEach(data => {
+    //         if (data.id === 0) {
+    //             toText.value = data.translation;
+    //         }
+    //     });
+    //     toText.setAttribute("placeholder", "Translation");
+    // });
+
+
 });
+
+
+function makeflags(languageArr) {
+    console.log('here');
+    console.log(languageArr);
+
+}

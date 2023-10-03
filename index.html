@@ -1,33 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <meta charset="utf-8">
 <title>translate</title>
 <link rel="stylesheet" type="text/css" href="assets/styles.css">
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <nav>
     <div class="containernav">
           <ul>
 <li><a href="index.html"><img class="logo" src="assets/img/word_img.png"></a></li>
-<li><a href="home">home</a></li>
+<li><a href="index.html">home</a></li>
 <li><a href="languages">languages</a></li>
-<li><a href="translated">translated</a></li>
+<li><a href="translated.html">translated</a></li>
 
         </ul>
         </div>
         </nav>
-
-
-        <!DOCTYPE html>
-        <!-- Coding By CodingNepal - youtube.com/codingnepal -->
-        <html lang="en" dir="ltr">
-        
-        <head>
-          <meta charset="utf-8">
-          <title>Language Translator | CodingNepal</title>
-          <link rel="stylesheet" href="styles.css">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        </head>
         
         <body>
           <div class="container">
@@ -63,84 +51,3 @@
         </body>
         
         </html>
-
-
-<!---
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Translation Website</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Translation Website</h1>
-    </header>
-    <main>
-        <div id="translation-container">
-            <label for="source-text">Enter text to translate:</label>
-            <textarea id="source-text" placeholder="Enter text here"></textarea>
-            <button id="translate-button">Translate</button>
-        </div>
-        <div id="result-container">
-            <h2>Translation Result:</h2>
-            <div id="translated-text"></div>
-        </div>
-    </main>
-    <script src="script.js"></script>
-</body>
-</html>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-const sourceText = document.getElementById('source-text');
-const translateButton = document.getElementById('translate-button');
-const translatedText = document.getElementById('translated-text');
-const resultContainer = document.getElementById('result-container');
-
-translateButton.addEventListener('click', () => {
-const textToTranslate = sourceText.value;
-if (!textToTranslate) {
-alert('Please enter text to translate.');
-return;
-}
-
-// Replace 'YOUR_API_KEY' with your actual Google Cloud Translation API key
-const apiKey = 'e7be84f3f1fca17585c1';
-
-const apiUrl = `https://api.mymemory.translated.net/set?seg=Hello World!&tra=Ciao Mondo!&langpair=en|it`;
-const data = {
-q: textToTranslate,
-target: 'es', // Change this to your desired target language code
-};
-
-fetch(apiUrl, {
-method: 'POST',
-headers: {
-'Content-Type': 'application/json',
-},
-body: JSON.stringify(data),
-})
-.then(response => response.json())
-.then(data => {
-const translation = data.data.translations[0].translatedText;
-translatedText.innerText = translation;
-resultContainer.style.display = 'block';
-})
-.catch(error => {
-console.error('Translation error:', error);
-alert('An error occurred while translating. Please try again later.');
-});
-});
-});
-
-</script>
-
--->
-
-
-</body>
-</html>
-
