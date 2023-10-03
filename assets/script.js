@@ -72,7 +72,8 @@ translateBtn.addEventListener("click", () => {
             }
             console.log(languageArr);
             //call a new funtion to go create the boxes
-            makeflags(languageArr);
+            makeflags(languageArr); 
+            
 
         })
         .catch(error => {
@@ -90,8 +91,6 @@ translateBtn.addEventListener("click", () => {
     //     });
     //     toText.setAttribute("placeholder", "Translation");
     // });
-
-
 });
 
 
@@ -100,3 +99,68 @@ function makeflags(languageArr) {
     console.log(languageArr);
 
 }
+
+//function makeFlags(languageArr) {
+  //  const container = document.body; // You can change this to the container element you want
+
+   // languageArr.forEach(language => {
+     //   const box = document.createElement('div');
+     //   box.className = 'language-box';
+      //  box.textContent = `${language.code}: ${language.name}`;
+       // container.appendChild(box);
+  //  });
+//}
+
+function makeFlags(languageArr) {
+    const container = document.body; // You can change this to the container element you want
+
+    languageArr.forEach(language => {
+        const box = document.createElement('div');
+        box.className = 'language-box';
+
+        // Create an image element
+        const flagImg = document.createElement('img');
+        flagImg.src = `path/to/flags/${language.code}.png`; // Replace with the actual path to your flag images
+        flagImg.alt = `${language.code} Flag`;
+        flagImg.className = 'flag-image';
+
+        // Append the image to the box
+        box.appendChild(flagImg);
+
+        // Create a span for the language name
+        const languageName = document.createElement('span');
+        languageName.textContent = language.name;
+
+        // Append the language name to the box
+        box.appendChild(languageName);
+
+        // Append the box to the container
+        container.appendChild(box);
+    });
+}
+
+// Assuming languageArr is already defined
+const languageArr = [
+    { code: 'en-GB', name: 'English' },
+    { code: 'es-ES', name: 'Spanish' },
+    { code: 'ma-MA', name: 'Mandarin' },
+    { code: 'fr-FR', name:'French'  },
+    { code: 'ko-KR', name: 'Korean' },
+    { code: 'de-DE', name: 'German' },
+    { code: 'it-IT', name: 'Italian' },
+    { code: 'nl-NL', name: 'Dutch' },
+    { code: 'he-IL', name: 'Hebrew' },
+    { code: 'sv-SE', name: 'Swedish' },
+    { code: 'fi-FI', name: 'Finnish' },
+    { code: 'da-DK', name: 'Danish' },
+    { code: 'hi-IN', name: 'Hindi' },
+    { code: 'th-TH', name: 'Thai' },
+    { code: 'ja-JP', name: 'Japanese' },
+    { code: 'pt-PT', name: 'Portuguese' },
+
+    // Add more languages as needed
+];
+
+window.onload = function () {
+    makeFlags(languageArr);
+};

@@ -274,3 +274,17 @@ li,
     grid-row: unset !important;
   }
 }
+
+.language-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.flag-image {
+  width: 50px;
+  /* Adjust the width as needed */
+  height: auto;
+  margin-bottom: 10px;
+}
