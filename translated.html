@@ -62,3 +62,30 @@
         </div>
     </div>
 </body>
+
+
+    <title>Translated Word</title>
+</head>
+
+<body>
+
+    <h1>Translated Word</h1>
+
+    <div id="output"></div>
+
+    <script>
+        // Get the word from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const word = urlParams.get('word');
+
+        // Display the word on the page
+        document.getElementById("output").innerText = `Generated Word: ${word}`;
+    </script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
