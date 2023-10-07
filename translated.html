@@ -16,6 +16,7 @@
     </div>
 </nav>
 
+
 <body>
     <div class="containertr">
         <div class="box">
@@ -63,8 +64,6 @@
     </div>
 </body>
 
-
-    <title>Translated Word</title>
 </head>
 
 <body>
@@ -85,7 +84,31 @@
 </body>
 
 </html>
+<!--
+<div class="rec">
+    <h1>Generated Words</h1>
 
+    <ul id="word-list">
+     
+    </ul>
+
+    <script>
+        // Get the words from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const encodedWords = urlParams.get('words');
+        const decodedWords = encodedWords ? JSON.parse(decodeURIComponent(encodedWords)) : [];
+
+        // Display the words on the page
+        const wordList = document.getElementById('word-list');
+
+        decodedWords.forEach(word => {
+            const listItem = document.createElement('li');
+            listItem.textContent = word;
+            wordList.appendChild(listItem);
+        });
+    </script>
+</div>
 </body>
 
 </html>
+-->

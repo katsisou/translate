@@ -288,3 +288,31 @@ li,
   height: auto;
   margin-bottom: 10px;
 }
+
+/*pick language*/
+label {
+  font-size: 30px;
+}
+
+.rec {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+}
+
+#word-list {
+  list-style: none;
+  padding: 0;
+}
+
+#word-list li {
+  margin: 8px 0;
+  font-size: 18px;
+  color: #555;
+}
