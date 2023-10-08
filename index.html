@@ -24,7 +24,7 @@
 <label for="word">Enter a word:</label>
 <input type="text" id="word" placeholder="Type a word">
 
-<label for="targetLanguages">Select target languages:</label>
+<label for="targetLanguages">Pick languages</label>
 <div id="targetLanguages" class="language-grid">
   <div class="language-option">
     <img id="en-US" class="flag-button" src="assets/img/en.png" alt="US Flag"
@@ -77,6 +77,7 @@
   </div>
 </div>
 
+<button onclick="translateWord()">Translate</button>
 
   <!---
   <label for="word">Enter a word:</label>
@@ -197,7 +198,6 @@
     <option value="pt">🇵🇹 Portuguese</option>
   </select>
 -->
-  <button onclick="translateWord()">Translate</button>
 
   <script src="assets/script.js"></script>
   <script src="assets/countries.js"></script>

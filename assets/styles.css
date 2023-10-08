@@ -1,10 +1,12 @@
 
 * {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 body {
   align-items: center;
@@ -48,6 +50,12 @@ body {
     font-size: 25px;
     text-decoration: none;
   }
+  
+li, i {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
   /*logo word.*/
   .logo { 
@@ -57,21 +65,45 @@ body {
     text-align:left;
 }
 
-/* Import Google Font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/*flags grid home page*/
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  /* Adjust the gap as needed */
+  position: absolute;
+  top: 60%;
+  right: 80px;
+  /* Adjust the right spacing as needed */
+  transform: translateY(-50%);
+}
 
+.flag-button {
+  cursor: pointer;
+  width: 150px;
+  /* Adjust the width as needed */
+  height: 100px;
+  /* Adjust the height as needed */
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 768px) {
+  .language-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flag-button {
+    width: 60px;
+    height: 40px;
+  }
+}
+
+.flag-button.selected {
+  opacity: 0.7;
+}
 
 .text-input textarea::placeholder {
   color: #b7b6b6;
-}
-
-.controls,
-li,
-.icons,
-.icons i {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 
@@ -100,7 +132,7 @@ li,
 }
 
 .containertr .box:hover {
-  background: #e91e63;
+  background: #1B2845;
 }
 
 .containertr .box img {
@@ -129,42 +161,25 @@ li,
   grid-row: span 1;
 }
 
-@media (max-width: 991px) {
-  .containertr {
-    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-    grid-template-rows: minmax(auto, auto);
-  }
 
   .containertr .box {
     grid-column: unset !important;
     grid-row: unset !important;
   }
-}
+
 
 
 /*pick language*/
 label {
-  font-size: 30px;
+  font-size: 50px;
+  display: block;
+  margin-top: 10px;
+  margin-left: 30px;
 }
+
 
 h1 {
   color: #333;
-}
-
-#word-list {
-  list-style: none;
-  padding: 0;
-}
-
-#word-list li {
-  margin: 8px 0;
-  font-size: 18px;
-  color: #555;
-}
-
-label {
-  display: block;
-  margin-top: 10px;
 }
 
 #translationOutput {
@@ -172,39 +187,22 @@ label {
 }
 
 
- .label-container {
-   margin-top: 10px;
- }
-
- .language-grid {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-   gap: 10px;
- }
-
- .language-option {
-   text-align: center;
- }
-
- .flag-button {
-   cursor: pointer;
-   height:70px;
-   width:100px;
- }
-
  button {
    padding: 10px;
-   background-color: #4caf50;
+   margin-top: 30px;
+   margin-left: 40px;
+   height: 40px;
+   width: 300px;
+   background-color: #1B2845;
    color: white;
    border: none;
    border-radius: 5px;
    cursor: pointer;
  }
 
+
  button:hover {
-   background-color: #45a049;
+  box-shadow: 0 2px 6px rgba(83, 100, 255, 0.45);
  }
 
- .flag-button.selected {
-   opacity: 0.7;
- }
+ 
