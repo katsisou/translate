@@ -111,7 +111,28 @@ function makeflags(languageArr) {
   //  });
 //}
 
-    
+const apiKey = 'e7be84f3f1fca17585c1'; // Replace with your MyMemory API key
+
+function generateRandomWord() {
+    const language = document.getElementById("language").value;
+
+    // Call MyMemory API to get a random word
+    const apiUrl = `https://api.mymemory.translated.net/get?q=random&langpair=${language}|en&key=${apiKey}`;
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            const translatedWord = data.matches[0].translation;
+
+            // Display the translated word on the page
+            document.getElementById("output").innerText = `Generated Word: ${translatedWord}`;
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            document.getElementById("output").innerText = 'Error fetching data. Please try again.';
+        });
+}    
+
 const translations = {
     en: ["apple", "banana", "car", "dog", "elephant", "flower", "guitar", "house", "ice cream", "jacket"],
     es: ["manzana", "plátano", "coche", "perro", "elefante", "flor", "guitarra", "casa", "helado", "chaqueta"],
@@ -141,51 +162,3 @@ function generateRandomWord() {
     window.location.href = `translated.html?word=${encodeURIComponent(randomWord)}`;
 }
 
-
-//       // Function to get the query parameter from the URL
-//                             function getQueryParam(name) {
-//         const urlParams = new URLSearchParams(window.location.search);
-//                             return urlParams.get(name);
-//       }
-
-//                             // Function to decode the query parameter and get the words
-//                             function getWordsFromQueryParam() {
-//         const encodedWords = getQueryParam('words');
-//                             if (encodedWords) {
-//           return JSON.parse(decodeURIComponent(encodedWords));
-//         }
-//                             return [];
-//       }
-
-//                             // Function to display the words on the page
-//                             function displayWords() {
-//         const words = getWordsFromQueryParam();
-//                             const wordList = document.getElementById('word-list');
-
-//         words.forEach(word => {
-//           const listItem = document.createElement('li');
-//                             listItem.textContent = word;
-//                             wordList.appendChild(listItem);
-//         });
-//       }
-
-//                             // Call the displayWords function when the page loads
-//                             window.onload = displayWords;
-              
-// // Modify your generateRandomWord function
-
-// function generateRandomWords() {
-//     const language = document.getElementById("language").value;
-//     const words = translations[language];
-//     const numberOfWords = 5; // Change this to the desired number of words
-//     const randomWords = [];
-
-//     for (let i = 0; i < numberOfWords; i++) {
-//         const randomIndex = Math.floor(Math.random() * words.length);
-//         const randomWord = words[randomIndex];
-//         randomWords.push(randomWord);
-//     }
-
-//     // Redirect to the display page with the generated words as a query parameter
-//     window.location.href = `translated.html?words=${encodeURIComponent(JSON.stringify(randomWords))}`;
-// }

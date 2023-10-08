@@ -16,7 +16,7 @@
     </div>
 </nav>
 
-
+<!---
 <body>
     <div class="containertr">
         <div class="box">
@@ -84,31 +84,37 @@
 </body>
 
 </html>
-<!--
-<div class="rec">
-    <h1>Generated Words</h1>
+-->
+<!DOCTYPE html>
+<html lang="en">
 
-    <ul id="word-list">
-     
-    </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #translationOutput {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="translationOutput"></div>
 
     <script>
-        // Get the words from the query parameter
+        // Get the word and target language from the query parameters
         const urlParams = new URLSearchParams(window.location.search);
-        const encodedWords = urlParams.get('words');
-        const decodedWords = encodedWords ? JSON.parse(decodeURIComponent(encodedWords)) : [];
+        const word = urlParams.get('word');
+        const targetLanguage = urlParams.get('targetLanguage');
 
-        // Display the words on the page
-        const wordList = document.getElementById('word-list');
-
-        decodedWords.forEach(word => {
-            const listItem = document.createElement('li');
-            listItem.textContent = word;
-            wordList.appendChild(listItem);
-        });
+        // Display the translation on the page
+        document.getElementById("translationOutput").innerText = `Translation of "${word}" in ${targetLanguage}: ${word}`;
     </script>
-</div>
 </body>
 
 </html>
--->
