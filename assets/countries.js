@@ -2,7 +2,8 @@ const countries = {
     "en-GB": "English",
     "es-ES": "Spanish",
     "fr-FR": "French",
-    "ko-KR": "Korean",
+    "zh-CN": "Madarin",
+    "ko-KO": "Korean",
     "de-DE": "German",
     "it-IT": "Italian",
     "nl-NL": "Dutch",
@@ -12,7 +13,7 @@ const countries = {
     "da-DK": "Danish",
     "hi-IN": "Hindi",
     "th-TH": "Thai",
-    "ja-JP": "Japanese",
+    "ja-JA": "Japanese",
     "pt-PT": "Portuguese",
 }
 

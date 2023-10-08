@@ -20,8 +20,162 @@
     </div>
   </nav>
 
+  <body>
+<label for="word">Enter a word:</label>
+<input type="text" id="word" placeholder="Type a word">
+
+<label for="targetLanguages">Select target languages:</label>
+<div id="targetLanguages" class="language-grid">
+  <div class="language-option">
+    <img id="en-US" class="flag-button" src="assets/img/en.png" alt="US Flag"
+      onclick="toggleLanguageSelection('en-US')">
+  </div>
+  <div class="language-option">
+    <img id="es" class="flag-button" src="assets/img/es.png" alt="Spanish Flag" onclick="toggleLanguageSelection('es')">
+  </div>
+  <div class="language-option">
+    <img id="zh-CN" class="flag-button" src="assets/img/cn.png" alt="Chinese flag" onclick="toggleLanguageSelection('zh-CN')">
+  </div>
+  <div class="language-option">
+    <img id="fr" class="flag-button" src="assets/img/fr.png" alt="France flag" onclick="toggleLanguageSelection('fr')">
+  </div>
+  <div class="language-option">
+    <img id="ko" class="flag-button" src="assets/img/ko.png" alt="Korean flag" onclick="toggleLanguageSelection('ko')">
+  </div>
+  <div class="language-option">
+    <img id="de" class="flag-button" src="assets/img/de.png" alt="German flag" onclick="toggleLanguageSelection('de')">
+  </div>
+  <div class="language-option">
+    <img id="it" class="flag-button" src="assets/img/it.png" alt="Italian flag" onclick="toggleLanguageSelection('it')">
+  </div>
+  <div class="language-option">
+    <img id="nl" class="flag-button" src="assets/img/nl.png" alt="Dutch flag" onclick="toggleLanguageSelection('nl')">
+  </div>
+  <div class="language-option">
+    <img id="he" class="flag-button" src="assets/img/he.png" alt="Hebrew flag" onclick="toggleLanguageSelection('he')">
+  </div>
+  <div class="language-option">
+    <img id="sv" class="flag-button" src="assets/img/sv.png" alt="Swedish flag" onclick="toggleLanguageSelection('sv')">
+  </div>
+  <div class="language-option">
+    <img id="fi" class="flag-button" src="assets/img/fi.png" alt="Finnish flag" onclick="toggleLanguageSelection('fi')">
+  </div>
+  <div class="language-option">
+    <img id="da" class="flag-button" src="assets/img/da.png" alt="Dannish flag" onclick="toggleLanguageSelection('da')">
+  </div>
+  <div class="language-option">
+    <img id="hi" class="flag-button" src="assets/img/hi.png" alt="Hindi" onclick="toggleLanguageSelection('hi')">
+  </div>
+  <div class="language-option">
+    <img id="th" class="flag-button" src="assets/img/th.png" alt="Thai flag" onclick="toggleLanguageSelection('th')">
+  </div>
+  <div class="language-option">
+    <img id="ja" class="flag-button" src="assets/img/ja.png" alt="Japanese flag" onclick="toggleLanguageSelection('ja')">
+  </div>
+  <div class="language-option">
+    <img id="pt" class="flag-button" src="assets/img/pt.png" alt="Portuguese flag" onclick="toggleLanguageSelection('pt')">
+  </div>
+</div>
+
+
+  <!---
   <label for="word">Enter a word:</label>
   <input type="text" id="word" placeholder="Type a word">
+
+  <label for="targetLanguages">Select target languages:</label>
+  <div id="targetLanguages" class="language-grid">
+    <div class="language-option">
+      <input type="checkbox" id="en-US" class="flag-button" value="en-US">
+      <label for="en-US">
+        <img class="flag" src="assets/img/en.png" alt="US Flag"> English
+      </label>
+    </div>
+    <div class="language-option">
+      <input type="checkbox" id="es" class="flag-button" value="es">
+      <label for="es">
+        <img class="flag" src="assets/img/es.png" alt="Spanish Flag"> Español
+      </label>
+    </div>
+    <div class="language-option">
+      <input type="checkbox" id="fr" class="flag-button" value="fr">
+      <label for="fr">
+        <img class="flag" src="assets/img/fr.png" alt="zh-CN"> French
+      </label>
+    </div>
+    <div class="language-option">
+      <input type="checkbox" id="ko" class="flag-button" value="ko">
+      <label for="ko">
+        <img class="flag" src="assets/img/ko.png" alt="ko"> Korean
+      </label>
+    </div>
+<div class="language-option">
+  <input type="checkbox" id="de" class="flag-button" value="de">
+  <label for="ko">
+    <img class="flag" src="assets/img/de.png" alt="de"> German
+  </label>
+</div>
+<div class="language-option">
+  <input type="checkbox" id="it" class="flag-button" value="it">
+  <label for="it">
+    <img class="flag" src="assets/img/it.png" alt="it"> Italian
+  </label>
+</div>
+<div class="language-option">
+  <input type="checkbox" id="nl" class="flag-button" value="nl">
+  <label for="nl">
+    <img class="flag" src="assets/img/nl.png" alt="nl"> Dutch
+  </label>
+</div>
+<div class="language-option">
+  <input type="checkbox" id="he" class="flag-button" value="he">
+  <label for="he">
+    <img class="flag" src="assets/img/he.png" alt="he"> Hebrew
+  </label>
+</div>
+<div class="language-option">
+  <input type="checkbox" id="sv" class="flag-button" value="sv">
+  <label for="sv">
+    <img class="flag" src="assets/img/sv.png" alt="he"> Swedish
+  </label>
+</div>
+<div class="language-option">
+  <input type="checkbox" id="fi" class="flag-button" value="fi">
+  <label for="he">
+    <img class="flag" src="assets/img/fi.png" alt="he"> Finnish
+  </label>
+</div>
+<div class="language-option">
+  <input type="checkbox" id="da" class="flag-button" value="da">
+  <label for="da">
+    <img class="flag" src="assets/img/da.png" alt="da"> Danish
+  </label>
+</div>
+<div class="language-option">
+  <input type="checkbox" id="hi" class="flag-button" value="hi">
+  <label for="hi">
+    <img class="flag" src="assets/img/hi.png" alt="hi"> Hindi
+  </label>
+</div>
+<div class="language-option">
+  <input type="checkbox" id="th" class="flag-button" value="th">
+  <label for="th">
+    <img class="flag" src="assets/img/th.png" alt="th"> Thai
+  </label>
+</div>
+<div class="language-option">
+  <input type="checkbox" id="ja" class="flag-button" value="ja">
+  <label for="ja">
+    <img class="flag" src="assets/img/ja.png" alt="he"> Japanese
+  </label>
+</div>
+<div class="language-option">
+  <input type="checkbox" id="pt" class="flag-button" value="pt">
+  <label for="pt">
+    <img class="flag" src="assets/img/pt.png" alt="he"> Portuguese
+  </label>
+</div>
+  </div>
+  
 
   <label for="targetLanguages">Select target languages:</label>
   <select id="targetLanguages" multiple>
@@ -42,7 +196,7 @@
     <option value="ja">🇯🇵 Japanese</option>
     <option value="pt">🇵🇹 Portuguese</option>
   </select>
-
+-->
   <button onclick="translateWord()">Translate</button>
 
   <script src="assets/script.js"></script>

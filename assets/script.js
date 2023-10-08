@@ -81,14 +81,26 @@
   //  });
 //}
 
-const apiKey = 'e7be84f3f1fca17585c1'; 
+const apiKey = 'e7be84f3f1fca17585c1';
+const selectedLanguages = new Set();
+
+function toggleLanguageSelection(language) {
+    const isSelected = selectedLanguages.has(language);
+    const flagElement = document.getElementById(language);
+
+    if (isSelected) {
+        selectedLanguages.delete(language);
+        flagElement.classList.remove('selected');
+    } else {
+        selectedLanguages.add(language);
+        flagElement.classList.add('selected');
+    }
+}
 
 function translateWord() {
     const word = document.getElementById("word").value;
-    const targetLanguagesSelect = document.getElementById("targetLanguages");
-    const targetLanguages = Array.from(targetLanguagesSelect.selectedOptions).map(option => option.value);
+    const targetLanguages = Array.from(selectedLanguages);
 
-    // Call MyMemory API for each selected language
     const translationPromises = targetLanguages.map(targetLanguage => {
         const apiUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(word)}&langpair=en|${targetLanguage}&key=${apiKey}`;
         return fetch(apiUrl)
@@ -100,12 +112,12 @@ function translateWord() {
             });
     });
 
-    // Wait for all translations to complete
     Promise.all(translationPromises)
         .then(translations => {
-            // Redirect to the display page with the translated words and target languages as query parameters
             const queryString = targetLanguages.map((language, index) => `language${index + 1}=${encodeURIComponent(language)}`).join('&');
             const wordsString = translations.map((translation, index) => `word${index + 1}=${encodeURIComponent(translation)}`).join('&');
             window.location.href = `translated.html?${queryString}&${wordsString}`;
         });
 }
+
+
