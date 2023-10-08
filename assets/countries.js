@@ -1,7 +1,6 @@
 const countries = {
     "en-GB": "English",
     "es-ES": "Spanish",
-    "ma-MA": "Mandarin",
     "fr-FR": "French",
     "ko-KR": "Korean",
     "de-DE": "German",

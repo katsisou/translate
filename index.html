@@ -10,14 +10,14 @@
           <ul>
 <li><a href="index.html"><img class="logo" src="assets/img/word_img.png"></a></li>
 <li><a href="index.html">home</a></li>
-<li><a href="languages">languages</a></li>
+<li><a href="languages.html">languages</a></li>
 <li><a href="translated.html">translated</a></li>
 
         </ul>
         </div>
         </nav>
         
-        
+        <!---
         <body>
           
           <div class="container">
@@ -47,12 +47,12 @@
             <button>Translate Text</button>
           </div>
         
-        <!--
+        
           <script src="assets/countries.js"></script>
           <script src="assets/script.js"></script>
         -->
 
-         <!---
+         <!--
           
           <body>
   <label for="language">pick Language:</label>
@@ -82,70 +82,53 @@
 
         </body>
         
-        </html>
-      -->
-
-      <!DOCTYPE html>
-      <html lang="en">
-      
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Translation Web App</title>
-        <style>
-          body {
-            font-family: Arial, sans-serif;
-          }
-      
-          label {
-            display: block;
-            margin-top: 10px;
-          }
-      
-          #translationOutput {
-            margin-top: 20px;
-          }
-        </style>
-      </head>
-      
-      <body>
-        <label for="word">Enter a word:</label>
-        <input type="text" id="word" placeholder="Type a word">
-      
-        <label for="targetLanguage">Select a target language:</label>
+     for="targetLanguage">Select a target language:</label>
         <select id="targetLanguage">
           <option value="es">Spanish</option>
           <option value="fr">French</option>
           <option value="de">German</option>
-          <!-- Add more language options as needed -->
+          
         </select>
       
         <button onclick="translateWord()">Translate</button>
       
-        <script>
-          const apiKey = 'e7be84f3f1fca17585c1'; // Replace with your MyMemory API key
-
-          function translateWord() {
-            const word = document.getElementById("word").value;
-            const targetLanguage = document.getElementById("targetLanguage").value;
-
-            // Call MyMemory API to get the translation
-            const apiUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(word)}&langpair=en|${targetLanguage}&key=${apiKey}`;
-
-            fetch(apiUrl)
-              .then(response => response.json())
-              .then(data => {
-                const translatedWord = data.matches[0].translation;
-
-                // Redirect to the display page with the translated word and target language as query parameters
-                window.location.href = `translated.html?word=${encodeURIComponent(translatedWord)}&targetLanguage=${encodeURIComponent(targetLanguage)}`;
-              })
-              .catch(error => {
-                console.error('Error fetching data:', error);
-                document.getElementById("translationOutput").innerText = 'Error fetching data. Please try again.';
-              });
-          }
-        </script>
+      
       </body>
       
       </html>
+    -->
+      
+      <body>
+      <label for="word">Enter a word:</label>
+      <input type="text" id="word" placeholder="Type a word">
+    
+      <label for="targetLanguages">Select target languages:</label>
+      <select id="targetLanguages" multiple>
+  <option value="en-US">🇺🇸 English</option>
+  <option value="es">🇪🇸 Español</option>
+  <option value="zh-CN">🇨🇳 Mandarin</option>
+  <option value="fr">🇫🇷 French</option>
+  <option value="ko">🇰🇷 Korean</option>
+  <option value="de">🇩🇪 German</option>
+  <option value="it">🇮🇹 Italian</option>
+  <option value="nl">🇳🇱 Dutch</option>
+  <option value="he">🇮🇱 Hebrew</option>
+  <option value="sv">🇸🇪 Swedish</option>
+  <option value="fi">🇫🇮 Finnish</option>
+  <option value="da">🇩🇰 Danish</option>
+  <option value="hi">🇮🇳 Hindi</option>
+  <option value="th">🇹🇭 Thai</option>
+  <option value="ja">🇯🇵 Japanese</option>
+  <option value="pt">🇵🇹 Portuguese</option>
+        <!-- Add more language options as needed -->
+      </select>
+    
+      <button onclick="translateWord()">Translate</button>
+      <button onclick="generateRandomWord()">Generate Random Word</button>
+
+    
+      <script src="assets/script.js"></script>
+      <script src="assets/countries.js"></script>
+    </body>
+    
+    </html>

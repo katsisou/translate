@@ -10,7 +10,7 @@
         <ul>
             <li><a href="index.html"><img class="logo" src="assets/img/word_img.png"></a></li>
             <li><a href="index.html">home</a></li>
-            <li><a href="languages">languages</a></li>
+            <li><a href="languages.html">languages</a></li>
             <li><a href="translated.html">translated</a></li>
         </ul>
     </div>
@@ -84,7 +84,7 @@
 </body>
 
 </html>
--->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -118,3 +118,33 @@
 </body>
 
 </html>
+
+-->
+
+
+<body>
+    <div id="translationOutput"></div>
+
+    <script>
+        // Get the words and target languages from the query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const targetLanguages = Array.from(urlParams.keys())
+            .filter(key => key.startsWith('language'))
+            .map(key => urlParams.get(key));
+
+        const words = Array.from(urlParams.keys())
+            .filter(key => key.startsWith('word'))
+            .map(key => urlParams.get(key));
+
+        // Display the translations on the page
+        const translationOutput = targetLanguages.map((language, index) => {
+            return `<p>Translation of "${words[index]}" in ${language}: ${words[index]}</p>`;
+        }).join('');
+
+        document.getElementById("translationOutput").innerHTML = translationOutput;
+    </script>
+</body>
+
+</html>
+
+<script src="assets/script.js"></script>
