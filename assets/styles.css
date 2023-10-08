@@ -72,7 +72,7 @@ li, i {
   gap: 20px;
   /* Adjust the gap as needed */
   position: absolute;
-  top: 60%;
+  top: 70%;
   right: 80px;
   /* Adjust the right spacing as needed */
   transform: translateY(-50%);
@@ -122,11 +122,12 @@ li, i {
 .containertr .box {
   color: #929796;
   background: #333;
-  padding: 20px;
+  padding: 10px;
   display: grid;
   font-size: 20px;
   place-items: center;
   text-align: center;
+  font-size: 30px;
   color: #fff;
   transition: 0.5s;
 }
@@ -167,7 +168,12 @@ li, i {
     grid-row: unset !important;
   }
 
-
+input[type="text" i] {
+ height: 30px;
+ width: 300px;
+ margin-left: 32px;
+ padding: 4px;
+}
 
 /*pick language*/
 label {
@@ -178,8 +184,14 @@ label {
 }
 
 
+
 h1 {
   color: #333;
+}
+
+h2 {
+  font-size: 50px;
+    display: block;
 }
 
 #translationOutput {
@@ -189,7 +201,7 @@ h1 {
 
  button {
    padding: 10px;
-   margin-top: 30px;
+   margin-top: 80px;
    margin-left: 40px;
    height: 40px;
    width: 300px;
@@ -204,5 +216,3 @@ h1 {
  button:hover {
   box-shadow: 0 2px 6px rgba(83, 100, 255, 0.45);
  }
-
- 
