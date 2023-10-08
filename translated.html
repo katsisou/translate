@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
 <meta charset="utf-8">
 <title>translate</title>
 <link rel="stylesheet" type="text/css" href="assets/styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <nav>
     <div class="containernav">
@@ -16,7 +18,6 @@
     </div>
 </nav>
 
-<!---
 <body>
     <div class="containertr">
         <div class="box">
@@ -64,62 +65,6 @@
     </div>
 </body>
 
-</head>
-
-<body>
-
-    <h1>Translated Word</h1>
-
-    <div id="output"></div>
-
-    <script>
-        // Get the word from the query parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const word = urlParams.get('word');
-
-        // Display the word on the page
-        document.getElementById("output").innerText = `Generated Word: ${word}`;
-    </script>
-
-</body>
-
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Translation Result</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        #translationOutput {
-            margin-top: 20px;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="translationOutput"></div>
-
-    <script>
-        // Get the word and target language from the query parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const word = urlParams.get('word');
-        const targetLanguage = urlParams.get('targetLanguage');
-
-        // Display the translation on the page
-        document.getElementById("translationOutput").innerText = `Translation of "${word}" in ${targetLanguage}: ${word}`;
-    </script>
-</body>
-
-</html>
-
--->
 
 <body>
     <div id="translationOutput"></div>
@@ -127,25 +72,18 @@
     <script>
         // Get the words and target languages from the query parameters
         const urlParams = new URLSearchParams(window.location.search);
-        const targetLanguages = Array.from(urlParams.keys())
-            .filter(key => key.startsWith('language'))
-            .map(key => urlParams.get(key));
-
-        const words = Array.from(urlParams.keys())
-            .filter(key => key.startsWith('word'))
-            .map(key => urlParams.get(key));
+        const targetLanguages = Array.from(urlParams.keys()).filter(key => key.startsWith('language')).map(key => urlParams.get(key));
+        const words = Array.from(urlParams.keys()).filter(key => key.startsWith('word')).map(key => urlParams.get(key));
 
         // Display the translations on the page
         const translationOutput = targetLanguages.map((language, index) => {
-            return `<p>Translation of "${words[index]}" in ${language}: ${words[index]}</p>`;
-        }).join('');
+            return `Translation of "${words[index]}" in ${language}: ${words[index]}`;
+        }).join('<br>');
 
         document.getElementById("translationOutput").innerHTML = translationOutput;
     </script>
 </body>
 
-<script src="assets/script.js"></script>
-<script src="assets/countries.js"></script>
-
-
 </html>
+
+

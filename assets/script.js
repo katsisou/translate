@@ -7,32 +7,32 @@
 //     const apiKey = 'e7be84f3f1fca17585c1';
    
 
-    const countries = 'assets/countries.json';
+//     const countries = 'assets/countries.json';
 
-    // const languageArr = [];
+//     const languageArr = [];
 
-    // fetch(countries)
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         // Check if data is an array
-    //         if (Array.isArray(data)) {
-    //             console.log(data);
+//     fetch(countries)
+//         .then(res => res.json())
+//         .then(data => {
+//             // Check if data is an array
+//             if (Array.isArray(data)) {
+//                 console.log(data);
 
-    //             data.forEach(item => {
-    //                 console.log(item);
-    //                 let text = 'hello'
-    //                 let translateFrom = 'en-GB';
-    //                 let translateTo = item.code;
+//                 data.forEach(item => {
+//                     console.log(item);
+//                     let text = 'hello'
+//                     let translateFrom = 'en-GB';
+//                     let translateTo = item.code;
 
 
-    //                 //call the api for each language type
-    //                 let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
+//                     //call the api for each language type
+//                     let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
 
-    //                 //add the result back into a new array to show content
-    //                 fetch(apiUrl).then(res => res.json()).then(language => {
-    //                     console.log(language);
-    //                     languageArr.push(language.matches[0]);
-    //                 })
+//                     //add the result back into a new array to show content
+//                     fetch(apiUrl).then(res => res.json()).then(language => {
+//                         console.log(language);
+//                         languageArr.push(language.matches[0]);
+//                     })
                 
 
 
@@ -52,15 +52,15 @@
 
 
 
-//     // fetch(apiUrl).then(res => res.json()).then(data => {
-//     //     toText.value = data.responseData.translatedText;
-//     //     data.matches.forEach(data => {
-//     //         if (data.id === 0) {
-//     //             toText.value = data.translation;
-//     //         }
-//     //     });
-//     //     toText.setAttribute("placeholder", "Translation");
-//     // });
+    // fetch(apiUrl).then(res => res.json()).then(data => {
+    //     toText.value = data.responseData.translatedText;
+    //     data.matches.forEach(data => {
+    //         if (data.id === 0) {
+    //             toText.value = data.translation;
+    //         }
+    //     });
+    //     toText.setAttribute("placeholder", "Translation");
+    // });
 // });
 
 
@@ -70,19 +70,18 @@
 
 // }
 
-// //function makeFlags(languageArr) {
-//   //  const container = document.body; // You can change this to the container element you want
+//function makeFlags(languageArr) {
+  //  const container = document.body; // You can change this to the container element you want
 
-//    // languageArr.forEach(language => {
-//      //   const box = document.createElement('div');
-//      //   box.className = 'language-box';
-//       //  box.textContent = `${language.code}: ${language.name}`;
-//        // container.appendChild(box);
-//   //  });
-// //}
+   // languageArr.forEach(language => {
+     //   const box = document.createElement('div');
+     //   box.className = 'language-box';
+      //  box.textContent = `${language.code}: ${language.name}`;
+       // container.appendChild(box);
+  //  });
+//}
 
-
-const apiKey = 'e7be84f3f1fca17585c1'; // Replace with your MyMemory API key
+const apiKey = 'e7be84f3f1fca17585c1'; 
 
 function translateWord() {
     const word = document.getElementById("word").value;
