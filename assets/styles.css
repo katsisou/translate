@@ -190,7 +190,7 @@ input {
   margin: auto;
   padding: 1px 0px;
   border-width: 2px;
-  border-color: (rgb(118, 118, 118), rgb(118, 118, 118));
+  border-color: (rgb(118, 118, 118));
   padding-block: 1px;
   padding-inline: 2px;
   width: 300px;
@@ -202,7 +202,6 @@ input {
 input[type="text" i] {
   padding-block: 1px;
   padding-inline: 2px;
-
 }
 
 label {
