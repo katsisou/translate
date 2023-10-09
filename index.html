@@ -21,10 +21,17 @@
   </nav>
 
   <body>
-<label for="word">Enter a word:</label>
-<input type="text" id="word" placeholder="Type a word">
 
+    <div class="pick-container">
 <h2>Pick Languages</h2>
+</div>
+
+<div class="label-container">
+      <label for="word">Enter a word:</label>
+      </div>
+    <input type="text" id="word" placeholder="Type a word">
+    
+
 <div id="targetLanguages" class="language-grid">
   <div class="language-option">
     <img id="en-US" class="flag-button" src="assets/img/en.png" alt="US Flag"
@@ -77,9 +84,11 @@
   </div>
 </div>
 
+<div class="button">
 <button onclick="translateWord()">Translate</button>
+</div>
 
-  <!---
+  <!--- previous layout of checkbox layout
   <label for="word">Enter a word:</label>
   <input type="text" id="word" placeholder="Type a word">
 
