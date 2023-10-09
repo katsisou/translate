@@ -1,3 +1,4 @@
+// Original layout that included the a input and output translation layout
 // translateBtn.addEventListener("click", () => {
 //     let text = fromText.value.trim(),
 //         translateFrom = selectTag[0].value,
