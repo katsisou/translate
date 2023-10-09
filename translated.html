@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
 <meta charset="utf-8">
 <title>translate</title>
 <link rel="stylesheet" type="text/css" href="assets/styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+<body>
 <nav>
     <div class="containernav">
         <ul>
@@ -17,122 +18,7 @@
         </ul>
     </div>
 </nav>
-<!---
-<body>
-<div class="containertr">
-    <div class="box" title="English" id="translation1">
-        <div class="content">
-            <img src="" alt="">
-            <p>word</p>
-        </div>
-    </div>
-
-    <div class="box" title="Spanish" id="translation2">
-        <div class="content">
-            <img src="" alt="">
-            <p>word</p>
-        </div>
-    </div>
-    
-    <div class="box" title="Mandarin" id="translation3">
-        <div class="content">
-            <img src="" alt="">
-            <p>word</p>
-        </div>
-    </div>
-
-<div class="box" title="French" id="translation4">
-    <div class="content">
-        <img src="" alt="">
-        <p>word</p>
-    </div>
-</div>
-
-<div class="box" title="Korean" id="translation5">
-    <div class="content">
-        <img src="" alt="">
-        <p>word</p>
-    </div>
-</div>
-
-<div class="box" title="German" id="translation6">
-    <div class="content">
-        <img src="" alt="">
-        <p>word</p>
-    </div>
-</div>
-
-<div class="box" title="Italian" id="translation7">
-    <div class="content">
-        <img src="" alt="">
-        <p>word</p>
-    </div>
-</div>
-
-<div class="box" title="Dutch" id="translation8">
-    <div class="content">
-        <img src="" alt="">
-        <p>word</p>
-    </div>
-</div>
-
-<div class="box" title="Hebrew" id="translation9">
-    <div class="content">
-        <img src="" alt="">
-        <p>word</p>
-    </div>
-</div>
-
-<div class="box" title="Swedish" id="translation10">
-    <div class="content">
-        <img src="" alt="">
-        <p>word</p>
-    </div>
-</div>
-
-<div class="box" title="Finnish" id="translation11">
-    <div class="content">
-        <img src="" alt="">
-        <p>word</p>
-    </div>
-</div>
-
-<div class="box" title="Danish" id="translation12">
-    <div class="content">
-        <img src="" alt="">
-        <p>word</p>
-    </div>
-</div>
-
-<div class="box" title="Hindi" id="translation13">
-    <div class="content">
-        <img src="" alt="">
-        <p>word</p>
-    </div>
-</div>
-
-<div class="box" title="Thai" id="translation14">
-    <div class="content">
-        <img src="" alt="">
-        <p>word</p>
-    </div>
-</div>
-
-<div class="box" title="Japanese" id="translation15">
-    <div class="content">
-        <img src="" alt="">
-        <p>word</p>
-    </div>
-</div>
-
-<div class="box" title="Portuguese" id="translation16">
-    <div class="content">
-        <img src="" alt="">
-        <p>word</p>
-    </div>
-</div>
-</div>
--->    
+</body>
 
         <body>
         
@@ -235,34 +121,6 @@
                 </div>
             </div>
         
-
-            <!--- trying to put the language when hover onto the boxes
-   <script>
-    // Get the words and target languages from the query parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    const targetLanguages = Array.from(urlParams.keys()).filter(key => key.startsWith('language')).map(key => urlParams.get(key));
-    const words = Array.from(urlParams.keys()).filter(key => key.startsWith('word')).map(key => urlParams.get(key));
-
-    // Display the translations in the respective box
-    targetLanguages.forEach((language, index) => {
-        const translation = words[index];
-        const boxElement = document.getElementById(`translation${index + 1}`);
-
-        // Set the content of the box
-        boxElement.innerHTML = `<img src="" alt="${language}"><p>${translation}</p>`;
-
-        // Set the tooltip to expose language and country information
-        const tooltip = `${getLanguageName(language)} - ${getCountryName(language)}`;
-        boxElement.setAttribute('title', tooltip);
-    });
-    
-
-</script>
-</body>
-
-</html>
-
--->
 <script>
     // Get the words and target languages from the query parameters
     const urlParams = new URLSearchParams(window.location.search);
@@ -276,4 +134,180 @@
     });
 </script>
 </body>
+
 </html>
+     
+<!--trying to place the languages names onto the boxes
+<div class="containertr">
+    <div class="box" title="en-US" id="translation1">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="es" id="translation2">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="zh-CN" id="translation3">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="fr" id="translation4">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="ko" id="translation5">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="de" id="translation6">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="it" id="translation7">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="nl" id="translation8">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="he" id="translation9">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="sv" id="translation10">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="fi" id="translation11">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="da" id="translation12">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="hi" id="translation13">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="th" id="translation14">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="ja" id="translation15">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+
+    <div class="box" title="pt" id="translation16">
+        <div class="content">
+            <img src="" alt="">
+            <p>word</p>
+        </div>
+    </div>
+</div>
+
+-->
+
+<!--  
+<script>
+    // Get the words and target languages from the query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const targetLanguages = Array.from(urlParams.keys()).filter(key => key.startsWith('language')).map(key => urlParams.get(key));
+    const words = Array.from(urlParams.keys()).filter(key => key.startsWith('word')).map(key => urlParams.get(key));
+
+    // Display the translations in the respective box
+    targetLanguages.forEach((language, index) => {
+        const translation = words[index];
+        const boxElement = document.getElementById(`translation${index + 1}`);
+
+        // Set the content of the box
+        boxElement.innerHTML = `<img src="" alt="${getLanguageName(language)}"><p>${translation}</p>`;
+
+        // Set the tooltip to expose language and country information
+        const tooltip = `${getLanguageName(language)} - ${getCountryName(language)}`;
+        boxElement.setAttribute('title', tooltip);
+    });
+
+    // Define a mapping of language codes to their full names
+    const languageNames = {
+        'en-US': 'English (US)',
+        'es': 'Spanish',
+        'zh-CN': 'Chinese',
+        'fr': 'French',
+        'ko': 'Korean',
+        'de': 'German',
+        'it': 'Italian',
+        'nl': 'Dutch',
+        'he': 'Hebrew',
+        'sv': 'Swedish',
+        'fi': 'Finnish',
+        'da': 'Danish',
+        'hi': 'Hindi',
+        'th': 'Thai',
+        'ja': 'Japanese',
+        'pt': 'Portuguese',
+    };
+
+    // Function to get the full name of a language
+    function getLanguageName(language) {
+        return languageNames[language] || 'Unknown Language';
+    }
+
+    // Function to get the country name based on the language code
+    function getCountryName(language) {
+        // You need to define the mapping of language codes to country names
+        // or adjust this function based on your use case.
+        // For now, it returns an empty string.
+        return '';
+    }
+</script>
+</body>
+
+</html>
+
