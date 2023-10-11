@@ -17,7 +17,7 @@ To improve the final website, revisit the flag interaction on the homepage. Impl
 
 **Referenece**
 
-* W3Schools online web tutorials. (n.d.). https://www.w3schools.com/
 * ChatGPT. (n.d). https://chat.openai.com/
 * Codepen. (n.d). https://codepen.io/
+* W3Schools online web tutorials. (n.d.). https://www.w3schools.com/
 
