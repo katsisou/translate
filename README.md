@@ -20,5 +20,6 @@ To improve the final website, revisit the flag interaction on the homepage. Impl
 
 * ChatGPT. (n.d). https://chat.openai.com/
 * Codepen. (n.d). https://codepen.io/
+* country-flag-icons (Community). (n.d.). Figma. https://www.figma.com/file/TqxHSZNYr9NAlPg8R42trG/country-flag-icons-(Community)?type=design&node-id=0-1&mode=design&t=nMjmibBNX6ReWoTr-0
 * W3Schools online web tutorials. (n.d.). https://www.w3schools.com/
 
