@@ -1,4 +1,4 @@
-#Rationale
+# Rationale
 **Introduction**
 The original idea is to create a prototype language translation web/app that generates random words and receives translations in various languages. The web/app responds to the brief by providing content delivered through the API. Users can select the language they want to translate by clicking on the flags and clicking on words to reveal the translation. As said in the artist statement, the UI is designed to be essential across different web app views and works effectively across different device sizes.
 
