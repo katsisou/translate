@@ -16,7 +16,7 @@ For the homepage, I intended to add the flags, and once hovered, it will show th
 To improve the final website, revisit the flag interaction on the homepage. Implement the intended functionality where hovering over the flags reveals the text of the language/country—also, adding the flags to the translated page provides users with a more intuitive and informative experience. Overall, it is a functional and interactive website for users interested in other languages and to be able to translate the word or sentence they type into the text box. 
 
 **Referenece**
-W3Schools online web tutorials. (n.d.). https://www.w3schools.com/
-ChatGPT. (n.d). https://chat.openai.com/
-Codepen. (n.d). https://codepen.io/
+* W3Schools online web tutorials. (n.d.). https://www.w3schools.com/
+* ChatGPT. (n.d). https://chat.openai.com/
+* Codepen. (n.d). https://codepen.io/
 
