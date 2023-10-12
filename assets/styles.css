@@ -163,8 +163,6 @@ li, i {
   color: #b7b6b6;
 }
 
-
-
 .flag-button {
   cursor: pointer;
   width: 150px;
@@ -244,3 +242,16 @@ h2 {
   box-shadow: 0 2px 6px rgba(83, 100, 255, 0.45);
  }
 
+/*
+.language-option {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.language-name {
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+*/

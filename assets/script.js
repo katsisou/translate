@@ -82,8 +82,28 @@
   //  });
 //}
 
+// const languageNames = {
+//     'en-US': 'English',
+//     'es': 'Spanish',
+//     'zh-CN': 'Chinese',
+//     'fr': 'French',
+//     'ko': 'Korean',
+//     'de': 'German',
+//     'it': 'Italian',
+//     'nl': 'Dutch',
+//     'he': 'Hebrew',
+//     'sv': 'Swedish',
+//     'fi': 'Finnish',
+//     'da': 'Danish',
+//     'hi': 'Hindi',
+//     'th': 'Thai',
+//     'ja': 'Japanese',
+//     'pt': 'Portuguese',
+// };
+
 const apiKey = 'e7be84f3f1fca17585c1';
 const selectedLanguages = new Set();
+
 
 function toggleLanguageSelection(language) {
     const isSelected = selectedLanguages.has(language);
