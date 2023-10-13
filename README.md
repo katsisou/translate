@@ -1,8 +1,11 @@
-#Rationale
+## Rationale
+
 **Introduction**
+
 The original idea is to create a prototype language translation web/app that generates random words and receives translations in various languages. The web/app responds to the brief by providing content delivered through the API. Users can select the language they want to translate by clicking on the flags and clicking on words to reveal the translation. As said in the artist statement, the UI is designed to be essential across different web app views and works effectively across different device sizes. The following flag countries I've decided to include are the United States of America, Spain, China, France, Korea, Germany, Italy, Netherlands, Israel, Swedish, Finland, Denmark, India, Thailand, Japan and Brazil as the translated languages are based on the most known languages around the world and the most used, which is English, Spanish, Mandarin, French, Korean, German, Italian, Dutch, Hebrew, Swedish, Finnish, Danish, Hindi, Thai, Japanese and Portuguese. 
 
 **Development Process**
+
 However, the outcome of the final web development changed to a different or somewhat similar concept. The original idea was to create a web app where users can interact with their chosen desires in choosing the language they want by clicking on the country flag of the listening languages. It is also a multiple-group selection as it generates the words in the different languages chosen beforehand.
 Thus, the outcome of the web app has changed. I intended to use Google Translate as my API as it is known to be the most reliable translation website to date, but with my little research, google Translate API needed to be purchased. It took more research to find an API translation that was for free instead. Many other translation apps had included free trials for either 14 days or a month but needed to be paid after the trial ended. Therefore, it took a lot of work to find a free API. However, I came across MyMemory API; its only requirement was to sign up to access the API. Hence, I used the MyMemory translation API on this project (https://mymemory.translated.net/doc/spec.php). 
 Alternatively, it was planned to generate random words, but I modified it for users to type the words they wanted. 
@@ -13,8 +16,11 @@ For the homepage, I intended to add the flags, and once hovered, it will show th
 
 To improve the final website, revisit the flag interaction on the homepage. Implement the intended functionality where hovering over the flags reveals the text of the language/country—also, adding the flags to the translated page provides users with a more intuitive and informative experience. Overall, it is a functional and interactive website for users interested in other languages and to be able to translate the word or sentence they type into the text box. 
 
-**Referenece**
-W3Schools online web tutorials. (n.d.). https://www.w3schools.com/
-ChatGPT. (n.d). https://chat.openai.com/
-Codepen. (n.d). https://codepen.io/
+
+**References**
+
+* ChatGPT. (n.d). https://chat.openai.com/
+* Codepen. (n.d). https://codepen.io/
+* country-flag-icons (Community). (n.d.). Figma. https://www.figma.com/file/TqxHSZNYr9NAlPg8R42trG/country-flag-icons-(Community)?type=design&node-id=0-1&mode=design&t=nMjmibBNX6ReWoTr-0
+* W3Schools online web tutorials. (n.d.). https://www.w3schools.com/
 
